@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors & Number Selector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <div class="particles"></div>
+    <div class="container">
+        <h1 class="title-animation">Game Center</h1>
+        
+        <!-- Rock Paper Scissors Section -->
+        <section class="game-section">
+            <h2>Rock Paper Scissors</h2>
+            <div class="game-container">
+                <div class="player-choice">
+                    <h3>Your Choice</h3>
+                    <div class="choices">
+                        <button class="choice-btn" data-choice="rock">🪨 Rock</button>
+                        <button class="choice-btn" data-choice="paper">📄 Paper</button>
+                        <button class="choice-btn" data-choice="scissors">✂️ Scissors</button>
+                    </div>
+                </div>
+                
+                <div class="result-display">
+                    <div class="vs-display">
+                        <div class="choice-card card-animate" id="player-card">
+                            <span class="choice-icon" id="player-icon">?</span>
+                            <p id="player-choice-text">You</p>
+                        </div>
+                        <span class="vs-text pulse-animation">VS</span>
+                        <div class="choice-card card-animate" id="computer-card">
+                            <span class="choice-icon" id="computer-icon">?</span>
+                            <p id="computer-choice-text">Computer</p>
+                        </div>
+                    </div>
+                    <div class="result-text fade-in" id="result-text">Choose your move!</div>
+                    <div class="score-board">
+                        <div class="score-item">
+                            <span>Your Score:</span>
+                            <span id="player-score">0</span>
+                        </div>
+                        <div class="score-item">
+                            <span>Computer Score:</span>
+                            <span id="computer-score">0</span>
+                        </div>
+                    </div>
+                    <button class="reset-btn" id="reset-game">Reset Game</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Number Range Selector Section -->
+        <section class="number-section">
+            <h2>Number Range Selector</h2>
+            <div class="number-container">
+                <div class="range-inputs">
+                    <div class="input-group">
+                        <label for="min-range">Minimum:</label>
+                        <input type="number" id="min-range" value="1" min="-9999" max="9999">
+                    </div>
+                    <div class="input-group">
+                        <label for="max-range">Maximum:</label>
+                        <input type="number" id="max-range" value="100" min="-9999" max="9999">
+                    </div>
+                    <button class="generate-btn" id="generate-number">Generate Random Number</button>
+                </div>
+                <div class="number-result">
+                    <div class="number-display" id="random-number">?</div>
+                    <p class="number-info" id="number-info">Set your range and click generate!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
